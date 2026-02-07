@@ -1,5 +1,6 @@
 # Gerenciador-de-tarefas
 Trio gerenciamento
+
 while True:
     print("*** GERENCIADOR DE TAREFAS ***")
     print("1 → Adicionar uma tarefa")
