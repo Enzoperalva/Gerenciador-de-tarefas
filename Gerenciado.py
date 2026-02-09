@@ -1,7 +1,6 @@
 import time
 
 adicionar_tarefa= []
-i=0
 
 while True:
     opcoes= 1,2,3,4,5
@@ -15,15 +14,15 @@ while True:
           '\033[34m[ 5 ]\033[m Sair')
     opcao= int(input('Opção:'))
     while opcao not in opcoes:
+        print('\033[31mTENTE NOVAMENTE!\033[m')
         time.sleep(0.5)
-        opcao = int(input('\033[31mTENTE NOVAMENTE!\033[m\n'
-                          'Opção:'))
+        opcao= int(input('Opção:'))
 
     if opcao == 1:
         while True:
             adicionar_nova_tarefa= str(input('Adicione alguma tarefa:'))
             adicionar_tarefa.append(adicionar_nova_tarefa)
-            time.sleep(0.3)
+            time.sleep(0.1)
             print('\033[32mTAREFA ADICIONADA <3\033[m')
             time.sleep(0.6)
             continuar= str(input('Deseja continuar adicionando tarefas? [S/N]')).upper().strip()[0]
@@ -44,10 +43,10 @@ while True:
                 print('=-'*20)
                 for c in range(len(adicionar_tarefa)):
                     print(f'Tarefa {c+1}: {adicionar_tarefa[0+c].capitalize()}')
-                continuar= str(input('Deseja sair? [ S ]')).upper().strip()[0]
-                while continuar not in 'S':
+                continuar= str(input('Deseja sair da lista? [S/N]')).upper().strip()[0]
+                while continuar not in 'SN':
                     continuar= str(input('\033[31mTENTE NOVAMENTE!\033[m\n'
-                                  'Deseja sair? [ S ]')).upper().strip()[0]
+                                  'Deseja sair? [S/N ]')).upper().strip()[0]
                 if continuar == 'S':
                     break
 
@@ -59,20 +58,37 @@ while True:
                 time.sleep(1)
                 break
             else:
-                print('=-' * 20)
+                print('=-' * 18)
                 print(f'{"\033[36mREMOVER TAREFAS\033[m":^40}')
-                print('=-' * 20)
+                print('=-' * 17)
                 for c in range(len(adicionar_tarefa)):
-                    print(f'[ {c} ] {adicionar_tarefa[0 + c].capitalize()}')
+                    print(f'\033[34mTarefa [ {c+1} ]:\033[m {adicionar_tarefa[c].capitalize()}')
                 remover= int(input('Qual tarefa você quer remover?'))
+                remover= remover-1
+                while remover not in range(len(adicionar_tarefa)):
+                    print('__' * 20)
+                    print('\033[31mTAREFA NÃO ENCONTRADA\033[m')
+                    time.sleep(1)
+                    print('=-' * 18)
+                    print(f'{"\033[36mREMOVER TAREFAS\033[m":^40}')
+                    print('=-' * 18)
+                    for c in range(len(adicionar_tarefa)):
+                        print(f'\033[34mTarefa [ {c+1} ]:\033[m {adicionar_tarefa[c].capitalize()}')
+                    remover = int(input('Qual tarefa você quer remover?'))
+                    remover= remover-1
                 print(f'\033[31mTAREFA {adicionar_tarefa[remover].upper()} REMOVIDA \033[m')
                 adicionar_tarefa.pop(remover)
-                continuar = str(input('Deseja sair? [ S ]')).upper().strip()[0]
-                while continuar not in 'S':
+                continuar = str(input('Deseja continuar removendo [S/N]')).upper().strip()[0]
+                while continuar not in 'SN':
                     continuar = str(input('\033[31mTENTE NOVAMENTE!\033[m\n'
-                                          'Deseja sair? [ S ]')).upper().strip()[0]
-                if continuar == 'S':
-                    break
+                                          'Deseja continuar removendo [S/N]')).upper().strip()[0]
+                if continuar == 'N':
+                    if not adicionar_tarefa:
+                        print('\033[31mLISTA VAZIA\033[m')
+                        time.sleep(1)
+                        break
+                    else:
+                        break
     elif opcao == 4:
         while True:
             if not adicionar_tarefa:
@@ -80,10 +96,7 @@ while True:
                 time.sleep(1)
                 break
             else:
-                for c in range(len(adicionar_tarefa)):
-                    adicionar_tarefa.pop()
-                print('\033[31mLISTA APAGADA\033[m')
-                time.sleep(1)
+                adicionar_tarefa= []
                 break
     elif opcao == 5:
         print('\033[35m__'*20)
