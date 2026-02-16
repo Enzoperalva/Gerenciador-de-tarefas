@@ -1,15 +1,51 @@
 📋 GERENCIADOR DE TAREFAS
-Um simples e funcional gerenciador de tarefas feito em Python para rodar no terminal. Ideal para organizar seu dia a dia de forma rápida e sem complicação.
+Gerenciador simples feito em Python para organizar tarefas pelo terminal.
 
-🚀 FUNCIONALIDADES
-✅ Adicionar tarefas - Insira novas tarefas na lista
+⚙️ FUNCIONALIDADES
+text
+[1] Adicionar tarefa
+[2] Listar tarefas
+[3] Remover tarefa  
+[4] Limpar lista
+[5] Sair
+🚀 COMO EXECUTAR
+bash
+# Clone o repositório
+git clone https://github.com/seuusuario/gerenciador-tarefas.git
 
-📋 Listar tarefas - Visualize todas as tarefas com numeração
+# Entre na pasta
+cd gerenciador-tarefas
 
-❌ Remover tarefa - Delete uma tarefa específica (com validação)
+# Execute
+python gerenciador.py
+📸 EXEMPLO RÁPIDO
+text
+Opção: 1
+Tarefa: Estudar Python
+✅ Adicionada!
 
-🧹 Limpar lista - Apague todas as tarefas de uma vez
+Opção: 2
+1. Estudar Python
 
-🎨 Interface colorida - Códigos ANSI para melhor visualização
+Opção: 3
+Digite o número da tarefa: 1
+❌ Removida!
+🧠 DESTAQUE TÉCNICO
+Validação de remoção: O programa só permite remover tarefas que existem.
 
-🛡️ Validação de entradas - Não aceita opções inválidas
+python
+while remover not in range(len(lista)):
+    print('Tarefa inválida')
+    remover = int(input('Digite novamente: '))
+📁 ESTRUTURA
+text
+gerenciador-tarefas/
+├── gerenciador.py    # Código principal
+└── README.md         # Este arquivo
+👨‍💻 FEITO COM
+Python 3
+
+Cores ANSI no terminal
+
+Muito café ☕
+
