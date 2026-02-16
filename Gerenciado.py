@@ -50,7 +50,6 @@ while True:
                 if continuar == 'S':
                     break
 
-
     elif opcao == 3:
         while True:
             if not adicionar_tarefa:
