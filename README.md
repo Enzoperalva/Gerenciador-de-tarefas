@@ -1,51 +1,73 @@
-📋 GERENCIADOR DE TAREFAS
+README.md - COMPLETO PARA COPIAR
+
+# 📋 GERENCIADOR DE TAREFAS
+
 Gerenciador simples feito em Python para organizar tarefas pelo terminal.
 
-⚙️ FUNCIONALIDADES
-text
-[1] Adicionar tarefa
-[2] Listar tarefas
-[3] Remover tarefa  
-[4] Limpar lista
-[5] Sair
-🚀 COMO EXECUTAR
+---
+
+## ⚙️ FUNCIONALIDADES
+
+- [1] Adicionar tarefa
+- [2] Listar tarefas  
+- [3] Remover tarefa
+- [4] Limpar lista
+- [5] Sair
+
+---
+
+## 🚀 COMO EXECUTAR
+
 bash
-# Clone o repositório
 git clone https://github.com/seuusuario/gerenciador-tarefas.git
-
-# Entre na pasta
 cd gerenciador-tarefas
-
-# Execute
 python gerenciador.py
-📸 EXEMPLO RÁPIDO
-text
+
+📸 EXEMPLO DE USO
+========================================
+        GERENCIADOR DE TAREFAS         
+========================================
+[ 1 ] Adicionar tarefa
+[ 2 ] Lista de tarefas
+[ 3 ] Remover tarefa
+[ 4 ] Limpar lista
+[ 5 ] Sair
 Opção: 1
-Tarefa: Estudar Python
-✅ Adicionada!
+
+Adicione alguma tarefa: Estudar Python
+✅ TAREFA ADICIONADA
+Deseja continuar? [S/N] N
 
 Opção: 2
 1. Estudar Python
 
 Opção: 3
-Digite o número da tarefa: 1
-❌ Removida!
+Tarefa [ 1 ]: Estudar Python
+Qual tarefa remover? 1
+❌ TAREFA REMOVIDA
+
 🧠 DESTAQUE TÉCNICO
 Validação de remoção: O programa só permite remover tarefas que existem.
+while remover not in range(len(adicionar_tarefa)):
+    print('TAREFA NÃO ENCONTRADA')
+    # Mostra a lista novamente
+    remover = int(input('Qual tarefa? '))
+    remover = remover - 1
+Ajuste de índice: Usuário vê [1], [2], [3] mas Python guarda como 0, 1, 2.
+remover = remover - 1  # Converte para índice correto
+adicionar_tarefa.pop(remover)
 
-python
-while remover not in range(len(lista)):
-    print('Tarefa inválida')
-    remover = int(input('Digite novamente: '))
-📁 ESTRUTURA
-text
+📁 ESTRUTURA DO PROJETO
 gerenciador-tarefas/
 ├── gerenciador.py    # Código principal
-└── README.md         # Este arquivo
-👨‍💻 FEITO COM
+└── README.md         # Documentação
+
+🛠️ TECNOLOGIAS
 Python 3
 
-Cores ANSI no terminal
+Códigos ANSI para cores
 
-Muito café ☕
+Time para pausas
 
+📄 LICENÇA
+Este projeto está sob a licença MIT.
