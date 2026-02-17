@@ -23,7 +23,6 @@ git clone https://github.com/seuusuario/gerenciador-tarefas.git
 cd gerenciador-tarefas
 python gerenciador.py
 
-📸 EXEMPLO DE USO
 ========================================
         GERENCIADOR DE TAREFAS         
 ========================================
@@ -32,8 +31,8 @@ python gerenciador.py
 [ 3 ] Remover tarefa
 [ 4 ] Limpar lista
 [ 5 ] Sair
-Opção: 1
 
+Opção: 1
 Adicione alguma tarefa: Estudar Python
 ✅ TAREFA ADICIONADA
 Deseja continuar? [S/N] N
