@@ -37,14 +37,16 @@ Dentro da pasta onde o arquivo main.py está salvo, rode:
 Bash
 python main.py
 
-###🧠 Solução Criativa & Aprendizados
+---
+
+### 🧠 Solução Criativa & Aprendizados
 Ajuste de Índice: Como o Python começa a contar do 0, mas o usuário vê o 1, implementamos a lógica de remover - 1 para facilitar a usabilidade.
 
 Feedback Visual: Usamos códigos ANSI (\033[...m) para diferenciar sucessos (verde), erros (vermelho) e títulos (azul).
 
 Pausa Dramática: Utilizamos o time.sleep() para que as mensagens não sumissem rápido demais, melhorando a leitura.
 
-###👨‍💻 Desenvolvedores
+### 👨‍💻 Desenvolvedores
 
 [Enzo Peralva - GitHub](https://github.com/Enzoperalva)
 
